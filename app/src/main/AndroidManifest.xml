@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ecoride.fstt.ac.ma">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".UI.Activities.Activities.ScanQR"></activity>
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="false"
+            android:label="{YOUR_LABEL_NAME}">
+            <intent-filter>
+                <action android:name="{YOUR_INTENT_NAME}"></action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="5lkcZynUC1KgocysWhkJ" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="zOIoI6zWTYBaIphDo4AP-Q" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="GvchQY3eNY08uPYT+LMGUDyNDxePzkYNck5EkE9478+KljqbDWSmqS5l1YjuPITlPSr7L8+3RydVQsGDvy+VNJqyuJHg8he0Vu7nzVE9KlXAxPFEGqZh1UFcSbNvxefIQMjpiwt01srSjoB60CxTL1YSEOKhWJlWaCml0fbLi3LFKkM5kSKcYHzjmr10ipIRWwobBSo1NcxLhxx1siQcP8k/2XfocoCVBgqfuBeWti63Hk9kMox+VDl7xb5ZE7WPmtLhIWcc6t3DdRlGh9/AWphmgZfiYv2zTWRaS22hTfDM+vVPQQelIOaeOe8mQ4EZn/dnpNsYoRcOQhE8iYXPgYU5s7UG8ccCwjGFRQo1ENqo2LXqKMYGPDmXFqkxZbaDYO0gmrRu3x5hyY3lvL5pKwOqzAwpKmpjSmmbcdnm/c5hDi8Cslo0cf9b/A+IbkpcG4lOYJY2/KoWrVyNN5cLA8NUz+B0WqFKJ7FTxsOr93bzPwjz67crmWeAeho322AWfjoouz4SUDTIRpZFw9oVXULjP3C7R8/gAry4SChTxSfjWEC9/hdT5wJSYhQJGuEBB2rAdTGfK/+kGiNZ1duXbKeNRpGDz6Nkn9jAsKZRWvTUEa719W1iLkBUiPCU7N/0j+DffIKMG777CDKocnWdaLOTvCltjQkPnWtwXLhY/y0=" />
+
+        <activity android:name=".UI.Activities.Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
